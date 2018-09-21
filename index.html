@@ -58,6 +58,7 @@
 			<br><br><br><br><br>
                <i href="/index.html">
                <p><font id="unmuteText" onclick="unmute()" size="2">[unmute]</font></p>
+               <p><font onclick="restart()" size="2">[unmute]</font></p>
                </i>
             </div>
 			
@@ -77,6 +78,11 @@
 					document.getElementById("unmuteText").innerHTML = "[mute]";
 					vid.currentTime = 0;
 				}
+			}
+		
+			function restart(){
+			var vid = document.getElementById("vid");
+				vid.currentTime = 0;
 			}
 		</script>
 		 
