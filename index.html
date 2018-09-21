@@ -57,7 +57,7 @@
 			<div class="animated fadeInUp">
 			<br><br><br><br><br>
                <i href="/index.html">
-               <p><font id="unmuteText" onclick="unmute()" size="2">unmute</font></p>
+               <p><font id="unmuteText" onclick="unmute()" size="2">[unmute]</font></p>
                </i>
             </div>
 			
@@ -70,11 +70,11 @@
 				vid.muted = !vid.muted;
 				vid.volume = 1.0;
 				if (vid.muted)
-					document.getElementById("unmuteText").innerHTML = "unmute";
+					document.getElementById("unmuteText").innerHTML = "[unmute]";
 				
 				if (!vid.muted)
 				{
-					document.getElementById("unmuteText").innerHTML = "mute";
+					document.getElementById("unmuteText").innerHTML = "[mute]";
 					vid.currentTime = 0;
 				}
 			}
