@@ -8,7 +8,7 @@
       
       <title>ryancspiegel</title>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="theme-color" content="#3b3b3b">
+      <meta name="theme-color" content="#000000">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="shortcut icon" type="image/x-icon" href="">
       <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,8 +17,6 @@
       <link rel="stylesheet" href="css/animate.min.css">
       <link rel="stylesheet" type="text/css" href="css/star-animation.css">
       <link rel="stylesheet" href="css/stylez.css">
-      <link rel="stylesheet" href="css/gallery.css">
-      <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
 	  </head>
 	  <body>
 	  <div class="bg-animation">
@@ -57,8 +55,8 @@
 			<div class="animated fadeInUp">
 			<br><br><br><br><br>
                <i href="/index.html">
-               <p><font id="unmuteText" onclick="unmute()" size="2">[unmute]</font></p>
-               <p><font onclick="restart()" size="2">[restart]</font></p>
+               <p><font id="unmuteText" onclick="unmute()" size="2">[unmute]</font><br>
+               <font onclick="restart()" size="2">[restart]</font></p>
                </i>
             </div>
 			
@@ -74,10 +72,7 @@
 					document.getElementById("unmuteText").innerHTML = "[unmute]";
 				
 				if (!vid.muted)
-				{
 					document.getElementById("unmuteText").innerHTML = "[mute]";
-					vid.currentTime = 0;
-				}
 			}
 		
 			function restart(){
