@@ -1,0 +1,19 @@
+<input name="webUrl" type="text" size="300" value="">
+<button name="start" type="button" onCLick="httpGet()">
+
+<p><font id="respText">---</font></p>
+
+<script>
+function httpGet()
+{
+
+    for (i = 0, i < 200, i++) {
+      var xmlHttp = new XMLHttpRequest();
+      var requUrl = document.getElementById("webUrl").innerHTML;
+      xmlHttp.open( "GET", requUrl, false ); // false for synchronous request
+      xmlHttp.send( null );
+      document.getElementById("respText").innerHTML = xmlHttp.responseText;
+      return xmlHttp.responseText;
+    }
+}
+</script>
