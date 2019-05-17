@@ -15,7 +15,7 @@ function httpGet() {
       //xmlHttp.setRequestHeader("Origin", 'localhost');
       xmlHttp.send( null );
       document.getElementById("respText").innerHTML = xmlHttp.responseText;
-      console.log('Request ' + step);
+      console.log('Request ' + step + ': ' + requUrl);
       console.log('Response: ' + xmlHttp.responseText);
     }
 }
