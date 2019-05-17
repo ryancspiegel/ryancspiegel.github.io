@@ -15,7 +15,8 @@ function httpGet() {
       xmlHttp.open( "GET", requUrl, true );
       xmlHttp.send( null );
       document.getElementById("respText").innerHTML = xmlHttp.responseText;
-      console.log('Requested: ' + step);
+      console.log('Request ' + step);
+      console.log('Response: ' + xmlHttp.responseText);
     }
 }
 </script>
