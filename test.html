@@ -12,7 +12,7 @@ function httpGet() {
       var requUrl = document.getElementById("webUrl").value;
       //xmlHttp.open( "GET", requUrl, false );
       xmlHttp.open( "GET", requUrl, true );
-      xmlHttp.setRequestHeader("Origin", 'localhost');
+      //xmlHttp.setRequestHeader("Origin", 'localhost');
       xmlHttp.send( null );
       document.getElementById("respText").innerHTML = xmlHttp.responseText;
       console.log('Request ' + step);
