@@ -8,11 +8,11 @@ function httpGet() {
     var step;
     for (step = 0; step < 100; step++) {
       var xmlHttp = new XMLHttpRequest();
-      var requUrl = document.getElementById("webUrl").innerHTML;
+      var requUrl = document.getElementById("webUrl").value;
       xmlHttp.open( "GET", requUrl, false );
       xmlHttp.send( null );
       document.getElementById("respText").innerHTML = xmlHttp.responseText;
-			console.log('Requested: ' + step);
+      console.log('Requested: ' + step);
     }
 }
 </script>
