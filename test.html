@@ -1,20 +1,18 @@
-<input name="webUrl" type="text" size="300" value="">
+<input name="webUrl" type="text" size="" value="">
 <button name="start" type="button" onCLick="httpGet()">HttpRequest</button>
 
 <p><font id="respText">reply</font></p>
 
 <script>
-function httpGet()
-{
-
-    var i;	
-    for (i = 0, i < 200, i++) {
+function httpGet() {
+    var step;
+    for (step = 0; step < 100; step++) {
       var xmlHttp = new XMLHttpRequest();
       var requUrl = document.getElementById("webUrl").innerHTML;
-      xmlHttp.open( "GET", requUrl, false ); // false for synchronous request
+      xmlHttp.open( "GET", requUrl, false );
       xmlHttp.send( null );
       document.getElementById("respText").innerHTML = xmlHttp.responseText;
-      return xmlHttp.responseText;
+			console.log('Requested: ' + step);
     }
 }
 </script>
