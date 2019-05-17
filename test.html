@@ -13,7 +13,8 @@ function httpGet() {
       //xmlHttp.open( "GET", requUrl, false );
       xmlHttp.open( "GET", requUrl, true );
       //xmlHttp.setRequestHeader("Origin", 'localhost');
-      xmlHttp.send( null );
+      //xmlHttp.send( null );
+      xmlHttp.send();
       document.getElementById("respText").innerHTML = xmlHttp.responseText;
       console.log('Request ' + step + ': ' + requUrl);
       console.log('Response: ' + xmlHttp.responseText);
