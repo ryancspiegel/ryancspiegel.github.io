@@ -1,13 +1,13 @@
 <input name="webUrl" type="text" size="300" value="">
-<button name="start" type="button" onCLick="httpGet()">
+<button name="start" type="button" onCLick="httpGet()">HttpRequest</button>
 
-<p><font id="respText">---</font></p>
+<p><font id="respText">reply</font></p>
 
 <script>
 function httpGet()
 {
 
-	  var i;	
+    var i;	
     for (i = 0, i < 200, i++) {
       var xmlHttp = new XMLHttpRequest();
       var requUrl = document.getElementById("webUrl").innerHTML;
