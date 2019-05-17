@@ -10,7 +10,7 @@ function httpGet() {
     for (step = 0; step < 100; step++) {
       var xmlHttp = new XMLHttpRequest();
       var requUrl = document.getElementById("webUrl").value;
-      xhr.setRequestHeader("Origin", 'localhost');
+      xmlHttp.setRequestHeader("Origin", 'localhost');
       //xmlHttp.open( "GET", requUrl, false );
       xmlHttp.open( "GET", requUrl, true );
       xmlHttp.send( null );
