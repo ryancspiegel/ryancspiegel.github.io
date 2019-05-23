@@ -22,13 +22,18 @@ function httpGet() {
     
     var step;
     for (step = 0; step < 100; step++) {
+			
+      var requUrl = document.getElementById("webUrl").value;
+			document.open(requUrl);
+			
+			/*
       var requUrl = document.getElementById("webUrl").value;
       var client = new HttpClient();
       client.get(requUrl, function(response) {
         console.log('Request ' + step + ': ' + requUrl);
         console.log('Response: ' + response);
       document.getElementById("respText").innerHTML = response;
-      });
+      });*/
     }
 }
 </script>
