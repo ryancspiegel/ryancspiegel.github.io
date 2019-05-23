@@ -21,11 +21,12 @@ function httpGet() {
       }
     }*/
     
+    var requUrl = document.getElementById("webUrl").value;
+  
     var step;
     for (step = 0; step < 100; step++) {
 			
-      var requUrl = document.getElementById("webUrl").value;
-			document.open(requUrl);
+      document.open(requUrl);
       console.log('Request ' + step + ': ' + requUrl);
 			
 			/*
