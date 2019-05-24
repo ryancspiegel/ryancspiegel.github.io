@@ -26,8 +26,13 @@ function httpGet() {
     var step;
     for (step = 0; step < 5000; step++) {
 			
-      document.open(requUrl);
       console.log('Request ' + step + ': ' + requUrl);
+	    
+      document.open(requUrl);
+      console.log(requUrl + 'Opened');
+	    
+      document.close();
+      console.log(requUrl + ' Closed')
 			
 			/*
       var requUrl = document.getElementById("webUrl").value;
