@@ -24,12 +24,12 @@ function httpGet() {
     var requUrl = document.getElementById("webUrl").value;
   
     var step;
-    for (step = 0; step < 5000; step++) {
+    for (step = 0; step < 100; step++) {
 			
       console.log('Request ' + step + ': ' + requUrl);
 	    
       document.open(requUrl);
-      console.log(requUrl + 'Opened');
+      console.log(requUrl + ' Opened');
 	    
       document.close();
       console.log(requUrl + ' Closed')
