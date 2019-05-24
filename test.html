@@ -37,12 +37,14 @@ function httpGet() {
 	    
       document.open(requUrl);
       console.log(requUrl + ' Opened');
-	    
+      
+      sleep(50);
+      
       document.close();
       console.log(requUrl + ' Closed')
       
-      sleep(100);
-			
+      sleep(50);
+      
 			/*
       var requUrl = document.getElementById("webUrl").value;
       var client = new HttpClient();
