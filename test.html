@@ -35,11 +35,12 @@ function sleep(miliseconds) {
 	
 function httpGet() {  
     var requUrl = document.getElementById("webUrl").value;
+    var setRespText = document.getElementById("respText").value;
   
     var step;
     for (step = 0; step < 1000; step++) {
       console.log('Request ' + step + ': ' + requUrl);
-      document.getElementById("respText").value = "&gt; " + step + "/1000 (" + requUrl + ")";
+      setRespText = "&gt; " + step + "/1000 (" + requUrl + ")";
 	    
       document.open(requUrl);
       document.write("<html><body><p>requested!</p></body></html>");
