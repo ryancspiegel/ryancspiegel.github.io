@@ -39,7 +39,7 @@ function httpGet() {
     var step;
     for (step = 0; step < 1000; step++) {
       console.log('Request ' + step + ': ' + requUrl);
-      document.getElementById("respText").innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
+      document.getElementById("respText").value = "&gt; " + step + "/1000 (" + requUrl + ")";
 	    
       document.open(requUrl);
       document.write("<html><body><p>requested!</p></body></html>");
