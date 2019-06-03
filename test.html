@@ -12,22 +12,7 @@ function sleep(miliseconds) {
    }
 }
 	
-function httpGet() {
-  
-    /*
-    var HttpClient = function() {
-      this.get = function(aUrl, aCallback) {
-          var anHttpRequest = new XMLHttpRequest();
-          anHttpRequest.onreadystatechange = function() { 
-              if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-                  aCallback(anHttpRequest.responseText);
-          }
-
-          anHttpRequest.open( "GET", aUrl, true );            
-          anHttpRequest.send( null );
-      }
-    }*/
-    
+function httpGet() {  
     var requUrl = document.getElementById("webUrl").value;
   
     var step;
@@ -36,23 +21,15 @@ function httpGet() {
       console.log('Request ' + step + ': ' + requUrl);
 	    
       document.open(requUrl);
+      document.write("<html><body><p>requested!</p></body></html>");
       console.log(requUrl + ' Opened');
-      
+	    
       sleep(50);
       
       document.close();
       console.log(requUrl + ' Closed')
       
       sleep(50);
-      
-			/*
-      var requUrl = document.getElementById("webUrl").value;
-      var client = new HttpClient();
-      client.get(requUrl, function(response) {
-        console.log('Request ' + step + ': ' + requUrl);
-        console.log('Response: ' + response);
-      document.getElementById("respText").innerHTML = response;
-      });*/
     }
 }
 </script>
