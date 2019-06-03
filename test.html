@@ -40,7 +40,6 @@ function httpGet() {
     var step;
     for (step = 0; step < 1000; step++) {
       console.log('Request ' + step + ': ' + requUrl);
-      setRespText.innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
 	    
       document.open(requUrl);
       document.write("<html><body><p>requested!</p></body></html>");
@@ -52,6 +51,8 @@ function httpGet() {
       console.log(requUrl + ' Closed')
       
       sleep(50);
+	    
+      setRespText.innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
     }
 }
 </script>
