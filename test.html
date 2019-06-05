@@ -36,22 +36,21 @@ function sleep(miliseconds) {
 function httpGet() { 
 var requUrl = document.getElementById("webUrl").value;
 var setRespText = document.getElementById("respText");
+	
+setRespText.innerHTML = "&gt; requesting..." + " (" + requUrl + ")";
     
 setTimeout(function () {
   for (var step = 0; step < 1000; step++) {
       console.log('Request ' + step + ': ' + requUrl);
 	    
       document.open(requUrl);
-      setRespText.innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
-      //document.write("<html><body><p>requested!</p></body></html>");
       console.log(requUrl + ' Opened');
-	    
-      //sleep(50);
+      document.write("<html><body><center><p>done</p></center></body></html>");
       
       document.close();
       console.log(requUrl + ' Closed')
-      
-      //sleep(50);
+	  
+      sleep(5);
   }
 }, 1);
 }
