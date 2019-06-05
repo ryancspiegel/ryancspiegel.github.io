@@ -36,10 +36,9 @@ function sleep(miliseconds) {
 function httpGet() { 
 var requUrl = document.getElementById("webUrl").value;
 var setRespText = document.getElementById("respText");
-var step;
     
 setTimeout(function () {
-  for (step = 0; step < 1000; step++) {
+  for (var step = 0; step < 1000; step++) {
       console.log('Request ' + step + ': ' + requUrl);
 	    
       document.open(requUrl);
