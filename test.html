@@ -10,7 +10,7 @@ input, textarea, button {
   border: 1px solid Lime;
   padding: 0px;
   margin: 0;
-  width: 200px;
+  width: 30%;
   vertical-align: middle;
 
   background: none;
@@ -36,8 +36,9 @@ function sleep(miliseconds) {
 function httpGet() {  
     var requUrl = document.getElementById("webUrl").value;
     var setRespText = document.getElementById("respText");
-  
     var step;
+    
+    setTimeout(function(){
     for (step = 0; step < 1000; step++) {
       console.log('Request ' + step + ': ' + requUrl);
 	    
@@ -54,9 +55,9 @@ function httpGet() {
 	    
       setRespText.innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
     }
+    }, 1000);
 }
 </script>
 
-	
 </body>
 </html>
