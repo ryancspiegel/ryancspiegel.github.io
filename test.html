@@ -43,17 +43,16 @@ setTimeout(function () {
       console.log('Request ' + step + ': ' + requUrl);
 	    
       document.open(requUrl);
-      document.write("<html><body><p>requested!</p></body></html>");
+      setRespText.innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
+      //document.write("<html><body><p>requested!</p></body></html>");
       console.log(requUrl + ' Opened');
 	    
-      sleep(50);
+      //sleep(50);
       
       document.close();
       console.log(requUrl + ' Closed')
       
-      sleep(50);
-	    
-      setRespText.innerHTML = "&gt; " + step + "/1000 (" + requUrl + ")";
+      //sleep(50);
   }
 }, 1);
 }
