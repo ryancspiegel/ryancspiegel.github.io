@@ -37,11 +37,13 @@ function sleep(miliseconds) {
 	
 	
 function cpyRlScrpt() {
-  var copyText = document.querySelector("#reloadScript");
-	copyText.select();
-	document.execCommand("copy");
+  const input = document.getElementById('reloadScript-box');
+  input.focus();
+  input.select();
 	
-	document.getElementById("respText").innerHTML = "&gt; copied!";
+  document.execCommand("copy");
+	
+  document.getElementById("respText").innerHTML = "&gt; copied!";
 }
 	
 function httpGet() { 
