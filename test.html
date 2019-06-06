@@ -39,6 +39,8 @@ function cpyRlScrpt() {
 	var cpyTxt = "document.getElementsByTagName(\"body\")[0].innerHTML = \"&lt;iframe id=\"testFrame\" src=\"\"+window.location.toString()+\"\" style=\"position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%;\" onload=\"setInterval(document.getElementById(\'testFrame\').contentWindow.location.reload(), 10000);\"&gt;&lt;\/iframe&gt;\"";
 	cpyTxt.select();
 	document.execCommand("copy");
+	
+	document.getElementById("respText").innerHTML = "&gt; copied!";
 }
 	
 function httpGet() { 
