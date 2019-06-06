@@ -21,7 +21,7 @@ input, textarea, button {
 <center>
 <input id="webUrl" type="text" size="" value=""><br><br>
 <button type="button" onCLick="httpGet()">&gt; request</button><br><br>
-<button type="button" onCLick="rlScrpt()">&gt; reload script</button>
+<button type="button" onCLick="cpyRlScrpt()">&gt; copy reload script</button>
 </center><br>
 
 <p id="respText" style="text-align:center; color:Lime;">&gt; response</p><br><br>
@@ -35,8 +35,10 @@ function sleep(miliseconds) {
 }
 	
 	
-function rlScrpt() {
-	document.getElementsByTagName("body")[0].innerHTML = "<iframe id=\"testFrame\" src=\""+document.getElementById("webUrl").value+"\" style=\"position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%;\" onload=\"setInterval(document.getElementById(\'testFrame\').contentWindow.location.reload(), 10000);\"><\/iframe>"
+function cpyRlScrpt() {
+	var cpyTxt = "document.getElementsByTagName(\"body\")[0].innerHTML = \"&lt;iframe id=\"testFrame\" src=\"\"+window.location.toString()+\"\" style=\"position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%;\" onload=\"setInterval(document.getElementById(\'testFrame\').contentWindow.location.reload(), 10000);\"&gt;&lt;\/iframe&gt;\"";
+	cpyTxt.select();
+	document.execCommand("copy");
 }
 	
 function httpGet() { 
