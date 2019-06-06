@@ -23,7 +23,9 @@ input, textarea, button {
 <button type="button" onCLick="httpGet()">&gt; request</button>
 </center><br>
 
-<p id="respText" style="text-align:center; color:Lime;">&gt; response</p>
+<p id="respText" style="text-align:center; color:Lime;">&gt; response</p><br><br>
+<p style="text-align:center; color:Lime">&gt; document.getElementsByTagName('body')[0].innerHTML = "<iframe id='testFrame' src=''+window.location.toString()+'' style='position: absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%;' onload='setInterval(document.getElementById('testFrame').contentWindow.location.reload(), 10000);'><\/iframe>'</p>
+
 
 <script>
 function sleep(miliseconds) {
