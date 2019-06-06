@@ -39,7 +39,7 @@ function sleep(miliseconds) {
 function cpyRlScrpt() {
   const input = document.getElementById('reloadScript');
   input.focus();
-  input.select();
+  input[0].select();
 	
   document.execCommand("copy");
   console.log("Copied reload script!");
